@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*  */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgb(47, 150, 163), rgb(99, 114, 197));
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.search {
+  background: transparent;
+  border: 2px solid rgb(99, 114, 197);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: antiquewhite;
+}
+
+.search:focus {
+  outline: none;
+  background-color: rgb(99, 114, 197);
+}
+
+.location,
+.temperature {
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.temperature {
+  flex-direction: column;
+}
+.degree-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.degree-section span {
+  margin: 8px;
+  font-size: 28px;
+}
+
+.degree-section h2 {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .location,
+  .temperature {
+    flex-direction: column;
+  }
+
+  .temperature-description {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
